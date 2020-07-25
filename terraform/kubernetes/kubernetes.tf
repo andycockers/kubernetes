@@ -7,5 +7,7 @@ module "test-kubernetes" {
     machine_type       = var.machine_type
     node_pool_location = var.region
     node_pool_name     = var.node_pool_name
+    password           = var.password
     project_id         = var.project_id
+    username           = var.username
 }
