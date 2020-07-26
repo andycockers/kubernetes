@@ -8,3 +8,7 @@ module "test_bucket" {
   location    = var.region
   
 }
+
+output "stotage-bucket" {
+  value = module.test_bucket
+}
