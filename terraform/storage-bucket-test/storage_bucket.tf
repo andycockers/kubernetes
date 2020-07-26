@@ -9,6 +9,6 @@ module "test_bucket" {
   
 }
 
-output "stotage-bucket" {
+output "storage-bucket-name" {
   value = module.test_bucket
 }
