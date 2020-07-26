@@ -11,3 +11,7 @@ module "test-kubernetes" {
     project_id         = var.project_id
     username           = var.username
 }
+
+output "google_container_cluster" {
+    value = module.google_container_cluster
+}
