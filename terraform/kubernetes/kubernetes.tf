@@ -13,5 +13,5 @@ module "test-kubernetes" {
 }
 
 output "google_container_cluster" {
-    value = module.google_container_cluster.primary
+    value = module.test-kubernetes
 }
