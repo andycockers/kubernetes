@@ -19,5 +19,5 @@ output "cluster_id" {
 }
 
 output "google_container_cluster" {
-    value = module.google_container_cluster
+    value = module.test-kubernetes
 }
