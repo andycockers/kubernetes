@@ -17,3 +17,7 @@ output "car_cert" {
 output "cluster_id" {
     value = google_container_cluster.primary.id
 }
+
+output "google_container_cluster" {
+    value = module.google_container_cluster
+}
