@@ -5,5 +5,5 @@ module "test-project-viewer" {
   name            = var.test-project-viewer
   project_id      = var.project_id
   iam_binding     = var.project_viewer
-  member          = var.test
+  member          = var.test-sa
 }
