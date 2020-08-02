@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
     bucket = "automation-statefiles"
-    prefix = "jenkins-test-project/state"
+    prefix = "crm-api/state"
   }
 }
