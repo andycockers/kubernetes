@@ -1,2 +1,2 @@
-region     = "europe-west2"
-zone       = "europe-west2-a"
+region     = "europe-west3"
+zone       = "europe-west3-a"
