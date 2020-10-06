@@ -1,3 +1,3 @@
-image_name  = "packer-1601926211"
+image_name  = "23767704"
 server_type = "cx11"
 location    = "fsn1"
