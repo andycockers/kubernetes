@@ -13,6 +13,7 @@ resource "hcloud_server" "node1" {
     inline = ["systemctl stop swarm"]
 
     connection {
+    host:       = var.host
     type        = "ssh"
     user        = "root"
     private_key = var.private_key
