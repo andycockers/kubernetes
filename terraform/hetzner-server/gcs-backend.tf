@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
     bucket = "automation-statefiles"
-    prefix = var.server_name/state
+    prefix = var.server_name
   }
 }
