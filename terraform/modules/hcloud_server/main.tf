@@ -8,10 +8,9 @@ resource "hcloud_server" "node1" {
   server_type = var.server_type
   location    = var.location
 
-  provisioner "local-exec" {
+  provisioner "remote-exec" {
     when    = destroy
-    command = "stop swarm"
-    interpreter = ["/bin/bash", "-c", "/usr/bin/systemctl stop swarm"]
+    inline = ["systemctl stop swarm"]
                  
   }
 }
