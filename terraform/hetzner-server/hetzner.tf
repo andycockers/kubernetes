@@ -7,4 +7,5 @@ module "hetzner" {
   image_name      = var.image_name
   server_type     = var.server_type
   location        = var.location
+  private_key     = var.private_key
 }
