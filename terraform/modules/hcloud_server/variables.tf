@@ -1,5 +1,5 @@
 variable "name"        {}
 variable "server_name" {}
 variable "image_name"  {}
-variable "server_rype" {}
+variable "server_type" {}
 variable "location"    {}
