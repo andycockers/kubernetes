@@ -11,6 +11,8 @@ resource "hcloud_server" "node1" {
   provisioner "local-exec" {
     when    = destroy
     command = "stop swarm"
-    interpreter = "/bin/bash", "-c", "systemctl stop swarm"
+    interpreter = "/bin/bash"
+                 "-c"
+                 "systemctl stop swarm"
   }
 }
