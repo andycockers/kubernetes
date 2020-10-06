@@ -11,6 +11,12 @@ resource "hcloud_server" "node1" {
   provisioner "remote-exec" {
     when    = destroy
     inline = ["systemctl stop swarm"]
+
+    connection {
+    type        = "ssh"
+    user        = "root"
+    private_key = var.private_key
+  }
                  
   }
 }
