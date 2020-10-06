@@ -7,4 +7,9 @@ resource "hcloud_server" "node1" {
   image       = var.image_name
   server_type = var.server_type
   location    = var.location
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = "systemctl stop swarm"
+  }
 }
