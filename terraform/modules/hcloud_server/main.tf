@@ -4,7 +4,7 @@ data "hcloud_image" "ubuntu_slave" {
 
 resource "hcloud_server" "node1" {
   name        = var.server_name
-  image       = data.hcloud_image.ubuntu_slave.id
+  image       = "23767704"
   server_type = var.server_type
   location    = var.location
 }
