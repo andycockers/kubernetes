@@ -1,3 +1,3 @@
-image_name  = "23813018"
+image_name  = "23857793"
 server_type = "cx11"
 location    = "fsn1"
