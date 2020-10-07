@@ -7,5 +7,6 @@ resource "hcloud_server" "node1" {
   image       = data.hcloud_image.ubuntu_slave.id #The ID is displayed when the image is created
   server_type = var.server_type
   location    = var.location
+  ssh_keys    = var.ssh_keys
 
   }
