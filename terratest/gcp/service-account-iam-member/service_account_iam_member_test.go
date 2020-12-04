@@ -12,7 +12,7 @@ func TestServiceAccountIAMMember(t *testing.T) {
 	optionsServiceAccount := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../../../terraform/modules/service-account",
 		Vars: map[string]interface{}{
-			"project_gcp":     "jenkins-test-project-284609",
+			"project_id":      "jenkins-test-project-284609",
 			"sa_account_id":   "terratest-iam",
 			"sa_display_name": "Terratest role",
 			"name":            "Terratest",
