@@ -24,7 +24,7 @@ func TestComputeInstance(t *testing.T) {
 	// retryable errors in terraform testing.
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		// website::tag::3:: The path to where our Terraform code is located
-		TerraformDir: "../../../terraform/modules/compute-instance",
+		TerraformDir: "../../../terraform/modules/google_compute_instance",
 
 		// website::tag::4:: Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{
