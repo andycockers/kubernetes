@@ -3,7 +3,3 @@ resource "google_service_account" "sa" {
   display_name = var.sa_display_name
   project      = var.project_id
 }
-
-terraform {
-  backend "gcs" {}
-}
