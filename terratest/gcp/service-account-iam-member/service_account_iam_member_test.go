@@ -29,10 +29,10 @@ func TestServiceAccountIAMMember(t *testing.T) {
 
 		TerraformDir: "../../../terraform/modules/service-account-iam-member",
 		Vars: map[string]interface{}{
-			"project_id":  "jenkins-test-project-284609",
-			"iam_binding": "roles/storage.objectViewer",
-			"member":      email,
-			"name":        "Terratest",
+			"project_id": "jenkins-test-project-284609",
+			"role":       "roles/storage.objectViewer",
+			"member":     email,
+			"name":       "Terratest",
 		},
 	},
 	)
