@@ -35,7 +35,6 @@ func TestStorageBucket(t *testing.T) {
 		TerraformDir: "../../../terraform/modules/storage-bucket-acl",
 
 		Vars: map[string]interface{}{
-			"project_id":  "jenkins-test-project-284609",
 			"bucket_name": bucket_name,
 			"name":        bucket_name,
 		},
