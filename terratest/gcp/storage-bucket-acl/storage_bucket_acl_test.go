@@ -42,4 +42,7 @@ func TestStorageBucket(t *testing.T) {
 	},
 	)
 
+	defer terraform.Destroy(t, aclOptions)
+	terraform.InitAndApply(t, aclOptions)
+
 }
