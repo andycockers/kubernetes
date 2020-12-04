@@ -23,9 +23,8 @@ func TestStorageBucket(t *testing.T) {
 			"location":    "EU",
 			"name":        bucketName,
 		},
-		
-	}
-)
+	},
+	)
 
 	defer terraform.Destroy(t, bucketOptions)
 	terraform.InitAndApply(t, bucketOptions)
@@ -40,9 +39,7 @@ func TestStorageBucket(t *testing.T) {
 			"bucket_name": bucket_name,
 			"name":        bucket_name,
 		},
-		
-	}
-)
-
+	},
+	)
 
 }
