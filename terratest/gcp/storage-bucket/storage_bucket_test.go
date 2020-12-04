@@ -30,7 +30,7 @@ func TestStorageBucket(t *testing.T) {
 		Vars: map[string]interface{}{
 			"project_id":  "jenkins-test-project-284609",
 			"bucket_name": bucketName,
-			"location":    "Terratest role",
+			"location":    "EU",
 			"name":        bucketName,
 		},
 
