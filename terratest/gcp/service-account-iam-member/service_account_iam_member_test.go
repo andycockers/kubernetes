@@ -15,7 +15,7 @@ func TestServiceAccountIAMMember(t *testing.T) {
 			"project_id":      "jenkins-test-project-284609",
 			"sa_account_id":   "terratest",
 			"sa_display_name": "Terratest role",
-			"name":            "Terratest",
+			"name":            "",
 		},
 	},
 	)
@@ -32,7 +32,7 @@ func TestServiceAccountIAMMember(t *testing.T) {
 			"project_id": "jenkins-test-project-284609",
 			"role":       "roles/storage.objectViewer",
 			"member":     email,
-			//"name":       "Terratest",
+			"name":       "",
 		},
 	},
 	)
