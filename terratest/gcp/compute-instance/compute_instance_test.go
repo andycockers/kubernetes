@@ -31,7 +31,7 @@ func TestComputeInstance(t *testing.T) {
 			"project_id":        "jenkins-test-project-284609",
 			"gce_instance_name": InstanceName,
 			"machine_type":      "f1-micro",
-			"zone":              "europe-west2",
+			"zone":              "europe-west2-a",
 			"image":             "ubuntu-2004-focal-v20201201",
 		},
 
