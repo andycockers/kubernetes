@@ -1,7 +1,7 @@
 package test
 
 import (
-	fmt"
+	"fmt"
 	"strings"
 	"testing"
 
@@ -13,7 +13,6 @@ func TestStorageBucket(t *testing.T) {
 	t.Parallel()
 
 	bucketName := fmt.Sprintf("terratest-%s", strings.ToLower(random.UniqueId()))
-
 
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
