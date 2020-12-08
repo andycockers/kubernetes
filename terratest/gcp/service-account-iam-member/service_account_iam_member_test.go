@@ -10,7 +10,7 @@ import (
 
 func TestServiceAccountIAMMember(t *testing.T) {
 	//t.Parallel()
-	saID := fmt.Sprintf(randomdata.SillyName())
+	saID := fmt.Sprintf(randomdata.Title(randomdata.Male))
 
 	optionsServiceAccount := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../../../terraform/modules/service-account",
