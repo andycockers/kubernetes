@@ -20,7 +20,7 @@ func RandomString(n int) string {
 func TestServiceAccount(t *testing.T) {
 	t.Parallel()
 
-	saID := fmt.Sprintf(RandomString(10))
+	saID := fmt.Println(RandomString(10))
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
 
