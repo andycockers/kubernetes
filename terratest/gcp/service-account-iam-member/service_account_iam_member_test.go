@@ -1,22 +1,19 @@
 package test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
-	"github.com/thanhpk/randstr"
 )
 
 func TestServiceAccountIAMMember(t *testing.T) {
 	//t.Parallel()
-	saID := fmt.Sprintf(randstr.String(16))
 
 	optionsServiceAccount := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../../../terraform/modules/service-account",
 		Vars: map[string]interface{}{
 			"project_id":      "jenkins-test-project-284609",
-			"sa_account_id":   saID,
+			"sa_account_id":   "terratestiammember",
 			"sa_display_name": "Terratest role",
 			"name":            "",
 		},
