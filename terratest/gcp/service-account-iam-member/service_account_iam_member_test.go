@@ -13,7 +13,7 @@ func TestServiceAccountIAMMember(t *testing.T) {
 		TerraformDir: "../../../terraform/modules/service-account",
 		Vars: map[string]interface{}{
 			"project_id":      "jenkins-test-project-284609",
-			"sa_account_id":   "terratestiammember",
+			"sa_account_id":   "serviceaccountiam",
 			"sa_display_name": "Terratest role",
 			"name":            "",
 		},
