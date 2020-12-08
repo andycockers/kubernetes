@@ -2,16 +2,15 @@ package test
 
 import (
 	"fmt"
-	"strings"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/random"
+	"github.com/Pallinder/go-randomdata"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
 func TestServiceAccountIAMMember(t *testing.T) {
 	//t.Parallel()
-	saID := fmt.Sprintf("%s", strings.ToLower(random.UniqueId()))
+	saID := fmt.Sprintf(randomdata.SillyName())
 
 	optionsServiceAccount := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../../../terraform/modules/service-account",
