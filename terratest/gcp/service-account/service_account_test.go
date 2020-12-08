@@ -2,17 +2,25 @@ package test
 
 import (
 	"fmt"
-	"strings"
+	"math/rand"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/random"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
+
+func RandomString(n int) string {
+	var letters = []rune("abcdefghijklmnopqrstuvwxyz")
+	s := make([]rune, n)
+	for i := range s {
+		s[i] = letters[rand.Intn(len(letters))]
+	}
+	return string(s)
+}
 
 func TestServiceAccount(t *testing.T) {
 	t.Parallel()
 
-	saID := fmt.Sprintf("%s", strings.ToLower(random.UniqueId()))
+	saID := fmt.Sprintf(RandomString(10))
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
 
