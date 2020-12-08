@@ -1,14 +1,18 @@
 package test
 
 import (
+	"fmt"
+	"strings"
 	"testing"
 
+	"github.com/gruntwork-io/terratest/modules/random"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
 func TestServiceAccount(t *testing.T) {
 	t.Parallel()
 
+	saID := fmt.Sprintf("%s", strings.ToLower(random.UniqueId()))
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
 
@@ -24,7 +28,7 @@ func TestServiceAccount(t *testing.T) {
 		// website::tag::4:: Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{
 			"project_id":      "jenkins-test-project-284609",
-			"sa_account_id":   "terratest",
+			"sa_account_id":   saID,
 			"sa_display_name": "Terratest role",
 			"name":            "Terratest",
 		},
