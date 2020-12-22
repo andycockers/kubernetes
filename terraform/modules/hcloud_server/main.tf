@@ -1,3 +1,7 @@
+provider "hcloud" {
+  token = var.hcloud_token
+}
+
 data "hcloud_image" "ubuntu_slave" {
   with_selector = "type=ubuntu_slave"
 }

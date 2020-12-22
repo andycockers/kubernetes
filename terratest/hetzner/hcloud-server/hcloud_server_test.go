@@ -28,11 +28,12 @@ func TestHcloudServer(t *testing.T) {
 
 		// website::tag::4:: Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{
-			"server_name": ServerName,
-			"image_name":  "23857793",
-			"server_type": "cx11",
-			"location":    "fsn1",
-			"ssh_keys":    []string{"andy@DESKTOP-CC1QGR9"},
+			"server_name":  ServerName,
+			"image_name":   "23857793",
+			"server_type":  "cx11",
+			"location":     "fsn1",
+			"ssh_keys":     []string{"andy@DESKTOP-CC1QGR9"},
+			"hcloud_token": os.Args[1],
 		},
 
 		// website::tag::5:: Variables to pass to our Terraform code using TF_VAR_xxx environment variables
