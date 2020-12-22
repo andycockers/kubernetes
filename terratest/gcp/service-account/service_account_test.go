@@ -9,7 +9,7 @@ import (
 )
 
 func RandomString(n int) string {
-	var letters = []rune("abcdefghijklmnopqrstuvwxyz")
+	var letters = []rune("lmnopqrstuvwxyzabcdefghijk")
 	s := make([]rune, n)
 	for i := range s {
 		s[i] = letters[rand.Intn(len(letters))]
@@ -20,7 +20,7 @@ func RandomString(n int) string {
 func TestServiceAccount(t *testing.T) {
 	t.Parallel()
 
-	saID := fmt.Println(RandomString(10))
+	saID := fmt.Sprintf(RandomString(10))
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
 
