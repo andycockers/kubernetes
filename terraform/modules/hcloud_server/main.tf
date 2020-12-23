@@ -10,6 +10,8 @@ terraform {
       source  = "hashicorp/hcloud"
       version = "~> 1.23.0"
     }
+  }
+}
 
 provider "hcloud" {
   token = var.hcloud_token
@@ -27,5 +29,4 @@ resource "hcloud_server" "node1" {
   ssh_keys    = var.ssh_keys
 
   }
-  }
-}
+  
