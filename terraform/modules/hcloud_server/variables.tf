@@ -4,3 +4,4 @@ variable "image_name"   {}
 variable "server_type"  {}
 variable "location"     {}
 variable "ssh_keys"     {}
+variable "hcloud_token" {}
