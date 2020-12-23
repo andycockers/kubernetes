@@ -1,4 +1,4 @@
-provider "hetznercloud/hcloud" {
+provider "hcloud" {
   token = var.hcloud_token
 }
 
