@@ -18,6 +18,8 @@ func TestHcloudServer(t *testing.T) {
 		"HCLOUD_TOKEN",
 	}
 
+	ssh_keys := []string{"andy@DESKTOP-CC1QGR9"}
+
 	// website::tag::1:: Get the Project Id to use
 	//project_gcp := gcp.GetGoogleProjectIDFromEnvVar(t)
 
@@ -36,7 +38,7 @@ func TestHcloudServer(t *testing.T) {
 			"image_name":   "23857793",
 			"server_type":  "cx11",
 			"location":     "fsn1",
-			"ssh_keys":     []string{"andy@DESKTOP-CC1QGR9"},
+			"ssh_keys":     ssh_keys,
 			"hcloud_token": hcloudToken,
 			"name":         ServerName,
 		},
