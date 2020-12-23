@@ -15,7 +15,7 @@ func TestHcloudServer(t *testing.T) {
 	ServerName := fmt.Sprintf("terratest-%s", strings.ToLower(random.UniqueId()))
 
 	var hcloudToken = []string{
-		"hcloud_token",
+		"HCLOUD_TOKEN",
 	}
 
 	// website::tag::1:: Get the Project Id to use
