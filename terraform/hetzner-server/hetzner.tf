@@ -8,4 +8,9 @@ module "hetzner" {
   location        = var.location
   ssh_keys        = var.ssh_keys
   type            = var.type
+  hcloud_token    = var.hcloud_token
+}
+
+output "ipv4_address" {
+   value = module.hetzner.ipv4_address
 }
