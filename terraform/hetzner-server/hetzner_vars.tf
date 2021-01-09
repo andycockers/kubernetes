@@ -3,3 +3,4 @@ variable "server_name"  {}
 variable "location"     {}
 variable "ssh_keys"     {}
 variable "hcloud_token" {}
+variable "type"         {}

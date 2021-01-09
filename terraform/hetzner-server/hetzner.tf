@@ -7,4 +7,5 @@ module "hetzner" {
   server_type     = var.server_type
   location        = var.location
   ssh_keys        = var.ssh_keys
+  type            = var.type
 }
