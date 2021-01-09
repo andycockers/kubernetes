@@ -41,6 +41,7 @@ func TestHcloudServer(t *testing.T) {
 			"ssh_keys":     ssh_keys,
 			"hcloud_token": hcloudToken,
 			"name":         ServerName,
+			"type":         "type=ubuntu_slave",
 		},
 
 		// website::tag::5:: Variables to pass to our Terraform code using TF_VAR_xxx environment variables

@@ -1,5 +1,5 @@
 data "hcloud_image" "ubuntu_slave" {
-  with_selector = "type=ubuntu_slave"
+  with_selector = var.type
 }
 
 resource "hcloud_server" "node1" {
