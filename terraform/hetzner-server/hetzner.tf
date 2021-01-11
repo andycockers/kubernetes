@@ -3,7 +3,7 @@
 module "hetzner" {
   source          = "../modules/hcloud_server"
   name            = var.server_name
-  server_name     = var.server_name
+  server_name     = random_pet.name.id
   server_type     = var.server_type
   location        = var.location
   ssh_keys        = var.ssh_keys
