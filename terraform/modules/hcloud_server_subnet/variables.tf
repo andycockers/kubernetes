@@ -7,4 +7,3 @@ variable "hcloud_token" {}
 variable "type"         {}
 variable "network_id"   {}
 variable "ip"           {}
-variable "ip_range"     {}
