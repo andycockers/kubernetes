@@ -11,8 +11,13 @@ module "hetzner" {
   hcloud_token    = var.hcloud_token
   network_id      = var.network_id
   ip              = var.ip
+  ip_range        = var.ip_range
 }
 
 output "ipv4_address" {
    value = module.hetzner.ipv4_address
+}
+
+output "ip_range"     {
+   value = module.hetzner.ip_range
 }
