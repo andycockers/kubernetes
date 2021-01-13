@@ -5,3 +5,4 @@ server_name = "blah"
 type        = "type=hpc-image-template"
 network_id  = "823122"
 ip          = "10.0.1.6"
+node_count  = 2
