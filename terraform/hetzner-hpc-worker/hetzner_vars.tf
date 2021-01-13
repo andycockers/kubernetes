@@ -7,4 +7,3 @@ variable "type"         {}
 variable "network_id"   {}
 variable "ip"           {}
 variable "node_count"   {}
-

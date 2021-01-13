@@ -11,5 +11,9 @@ resource "hcloud_server" "node1" {
 
   count = var.node_count
 
+  network {
+      network_id = var.network_id
+  }
+
   }
   

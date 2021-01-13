@@ -11,8 +11,6 @@ resource "hcloud_server" "node1" {
   
   network {
       network_id = var.network_id
-      ip         = var.ip
-      alias_ips  = []
   }
 
   
