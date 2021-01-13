@@ -14,3 +14,7 @@ module "hetzner" {
 output "ipv4_address" {
    value = module.hetzner.ipv4_address
 }
+
+output "id" {
+   value = module.hetzner.id
+}
