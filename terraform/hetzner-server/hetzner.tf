@@ -9,6 +9,8 @@ module "hetzner" {
   ssh_keys        = var.ssh_keys
   type            = var.type
   hcloud_token    = var.hcloud_token
+  node_count      = var.node_count
+  network_id      = var.network_id
 }
 
 output "ipv4_address" {

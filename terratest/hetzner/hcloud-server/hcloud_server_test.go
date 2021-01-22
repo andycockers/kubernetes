@@ -41,6 +41,8 @@ func TestHcloudServer(t *testing.T) {
 			"hcloud_token": hcloudToken,
 			"name":         ServerName,
 			"type":         "type=ubuntu_slave_2",
+			"node_count":   1,
+			"network_id":   "823122",
 		},
 
 		// website::tag::5:: Variables to pass to our Terraform code using TF_VAR_xxx environment variables
