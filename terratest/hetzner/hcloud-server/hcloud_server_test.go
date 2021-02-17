@@ -40,7 +40,7 @@ func TestHcloudServer(t *testing.T) {
 			"ssh_keys":     ssh_keys,
 			"hcloud_token": hcloudToken,
 			"name":         ServerName,
-			"type":         "type=ubuntu_slave_2",
+			"type":         "type=hetzner_swarm_template",
 			"node_count":   1,
 			"network_id":   "823122",
 		},
