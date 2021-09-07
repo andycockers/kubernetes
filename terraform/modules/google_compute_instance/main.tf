@@ -4,17 +4,17 @@ resource "google_compute_instance" "default" {
   zone         = var.zone
   project      = var.project_id
 
-    boot_disk {
+  boot_disk {
     initialize_params {
       image = var.image
     }
   }
 
-    network_interface {
+  network_interface {
     network = "default"
 
     access_config {
-      
+
     }
   }
 
