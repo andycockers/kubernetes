@@ -30,6 +30,10 @@ resource "google_container_cluster" "primary" {
   cluster_autoscaling {
     enabled = false
   }
+
+  workload_identity_config {
+  identity_namespace = "${data.project_id}.svc.id.goog"
+}
 }
 
 resource "google_container_node_pool" "primary_preemptible_nodes" {
