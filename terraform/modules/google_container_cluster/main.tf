@@ -47,9 +47,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     service_account = google_service_account.default.email
     oauth_scopes    = [
-      "https://www.googleapis.com/auth/cloud-platform",
-      "roles/secretmanager.secretAccessor",
-      "roles/secretmanager.viewer"
+      "https://www.googleapis.com/auth/cloud-platform"
     ]
   }
 }
