@@ -9,7 +9,7 @@ terraform {
 inputs = {
   cluster_location = "us-central1-c"
   cluster_name     = "test-cluster"
-  machine_type     = "e2-micro"
+  machine_type     = "e2-small"
   project_id       = "jenkins-test-project-284609"
-  node_count       = "3"
+  node_count       = "2"
 }
