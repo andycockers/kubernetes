@@ -54,7 +54,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
   }
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    service_account = "jenkins-test-project-284609@appspot.gserviceaccount.com"
+    service_account = "andyc-963@jenkins-test-project-284609.iam.gserviceaccount.com"
     oauth_scopes    = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
