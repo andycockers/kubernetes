@@ -12,4 +12,5 @@ inputs = {
   machine_type     = "e2-small"
   project_id       = "jenkins-test-project-284609"
   node_count       = "2"
+  disk_size_gb     = "10"
 }
