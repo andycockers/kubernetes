@@ -25,6 +25,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -41,3 +43,4 @@ jobs:
           go get github.com/gruntwork-io/terratest/modules/random
           go get github.com/gruntwork-io/terratest/modules/ssh@v0.37.5
           go get github.com/gruntwork-io/terratest/modules/terraform@v0.37.5
+          go test
