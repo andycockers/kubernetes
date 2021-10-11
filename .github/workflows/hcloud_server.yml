@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: hcloud_server
 
 # Controls when the workflow will run
 on:
@@ -35,3 +35,9 @@ jobs:
         run: |
           tfenv install 0.12.29
           tfenv use 0.12.29
+          cd terratest/hetzner/hcloud-server
+          go mod init github.com/gruntwork-io/terratest/tree/master/modules/terraform
+          go mod tidy
+          go get github.com/gruntwork-io/terratest/modules/random
+          go get github.com/gruntwork-io/terratest/modules/ssh@v0.37.5
+          go get github.com/gruntwork-io/terratest/modules/terraform@v0.37.5
