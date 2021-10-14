@@ -7,10 +7,6 @@ terraform {
   }
 }
 
-provider "hcloud" {
-  token = var.HCLOUD_TOKEN
-}
-
 data "hcloud_image" "ubuntu_slave" {
   with_selector = var.type
 }
