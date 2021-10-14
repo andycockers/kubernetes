@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    hcloud = {
-      source = "hetznercloud/hcloud"
-      version = "1.31.1"
-    }
-  }
-}
-
 data "hcloud_image" "ubuntu_slave" {
   with_selector = var.type
 }
