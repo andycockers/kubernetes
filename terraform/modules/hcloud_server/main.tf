@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "hcloud" {
-  token = var.hcloud_token
+  token = var.HCLOUD_TOKEN
 }
 
 data "hcloud_image" "ubuntu_slave" {
