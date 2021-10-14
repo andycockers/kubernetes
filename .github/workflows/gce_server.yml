@@ -36,7 +36,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo ${credentials} > creds.json
-          gcloud auth activate-service-account --key-file=creds.json
+          gcloud auth activate-service-account andyc-963@jenkins-test-project-284609.iam.gserviceaccount.com --key-file=creds.json
           cd terratest/gcp/compute-instance
           go mod init github.com/gruntwork-io/terratest/tree/master/modules/terraform
           go mod tidy
