@@ -35,7 +35,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo ${credentials} | gcloud auth activate-service-account --key-file - &>/dev/null
+          echo ${credentials} > creds.json
+          gcloud auth activate-service-account --key-file=creds.json
           cd terratest/gcp/compute-instance
           go mod init github.com/gruntwork-io/terratest/tree/master/modules/terraform
           go mod tidy
