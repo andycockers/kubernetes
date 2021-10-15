@@ -33,7 +33,7 @@ jobs:
         run: |
           echo $GAC > $RUNNER_TEMP/sa.json
           cat $RUNNER_TEMP/sa.json
-          export $GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/sa.json
+          export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/sa.json
           cd terratest/gcp/compute-instance
           go mod init github.com/gruntwork-io/terratest/tree/master/modules/terraform
           go mod tidy
