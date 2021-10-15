@@ -29,7 +29,7 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "my-node-pool"
-  location   = "us-central1-c"
+  location   = var.cluster_location
   cluster    = google_container_cluster.primary.name
   node_count = var.node_count
   project  = var.project_id
