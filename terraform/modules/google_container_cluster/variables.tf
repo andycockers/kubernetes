@@ -4,4 +4,5 @@ variable "machine_type"     {}
 variable "project_id"       {}
 variable "node_count"       {}
 variable "disk_size_gb"     {}
+variable "disk_type"        {}
 

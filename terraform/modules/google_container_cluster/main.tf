@@ -38,6 +38,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
     preemptible  = true
     machine_type = var.machine_type
     disk_size_gb = var.disk_size_gb
+    disk_type    = var.disk_type
     
   }
 }
