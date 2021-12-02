@@ -34,6 +34,7 @@ func TestContainerClusterInstance(t *testing.T) {
 			"cluster_location": "europe-west2-a",
 			"node_count":       "1",
 			"disk_size_gb":     "20",
+			"disk_type":        "pd-standard",
 		},
 
 		// website::tag::5:: Variables to pass to our Terraform code using TF_VAR_xxx environment variables
