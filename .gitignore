@@ -29,3 +29,5 @@ override.tf.json
 # example: *tfplan*
 terratest/aws/aws-instance/go.mod
 terratest/aws/aws-instance/go.sum
+terragrunt/gcp/google_container_cluster/.terragrunt-cache
+terragrunt/gcp/google_container_cluster/.terraform.lock.hcl
