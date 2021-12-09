@@ -15,7 +15,6 @@ jobs:
           server_type: cx11
           location: fsn1
           network_id: "823122"
-          
           github-token: ${{ secrets.GH_PAT }}
     outputs:
       instance-id: ${{ steps.runner.outputs.instance-id }}
