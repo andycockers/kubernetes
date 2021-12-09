@@ -1,7 +1,9 @@
+name: hcloud server test
+
+on:
+  workflow_dispatch:
 jobs:
   start-runner:
-    permissions:
-      id-token: write
     runs-on: ubuntu-latest
     steps:
       - id: runner
