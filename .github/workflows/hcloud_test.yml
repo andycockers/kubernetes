@@ -1,16 +1,8 @@
-name: hcloud server test
+name: hcloud test
 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    paths:
-      - 'terraform/modules/hcloud_server/**'
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+  
   workflow_dispatch:
-
 jobs:
   start-runner:
     runs-on: ubuntu-latest
