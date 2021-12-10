@@ -9,7 +9,7 @@ jobs:
     steps:
       - id: runner
         name: Start runner
-        uses: andycockers/hcloud-actions-runner/start@0.0.3
+        uses: andycockers/hcloud-actions-runner/start@0.0.4
         with:
           hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
           type: type=github-hcloud-runner
