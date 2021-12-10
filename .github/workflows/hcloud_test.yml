@@ -18,7 +18,7 @@ jobs:
 
     - id: runner
       name: Start runner
-      uses: andycockers/hcloud-actions-runner/start@v0.0.31
+      uses: andycockers/hcloud-actions-runner/start@v0.0.32
       with:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         type: "type=github_hcloud_runner"
@@ -32,3 +32,20 @@ jobs:
    runs-on: ${{ needs.start-runner.outputs.instance-id }}
    steps:
      - run: uname -a
+
+  stop-runner:
+    if: always()
+    needs: [start-runner, main]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Terraform code
+      uses: actions/checkout@v2
+      with:
+        repository: andycockers/hcloud-actions-runner
+        token: ${{ secrets.GH_PAT }}
+        path: hcloud-actions-runner
+    - name: Stop runner
+      uses: andycockers/hcloud-actions-runner/stop@v0.0.32
+      with:
+        instance-id: ${{ needs.start-runner.outputs.instance-id }}
+        hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
