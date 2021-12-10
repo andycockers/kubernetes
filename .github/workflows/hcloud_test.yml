@@ -20,8 +20,8 @@ jobs:
     outputs:
       instance-id: ${{ steps.runner.outputs.instance-id }}
 
-   main:
-    needs: start-runner
-    runs-on: ${{ needs.start-runner.outputs.instance-id }}
-    steps:
-      - run: uname -a
+  main:
+   needs: start-runner
+   runs-on: ${{ needs.start-runner.outputs.instance-id }}
+   steps:
+     - run: uname -a
