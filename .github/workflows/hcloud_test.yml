@@ -7,16 +7,21 @@ jobs:
   start-runner:
     runs-on: ubuntu-latest
     steps:
-      - id: runner
-        name: Start runner
-        uses: andycockers/hcloud-actions-runner/start@0.0.7
-        with:
-          hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
-          type: type=github-hcloud-runner
-          server_type: cx11
-          location: fsn1
-          network_id: "823122"
-          github-token: ${{ secrets.GH_PAT }}
+    - name: Checkout Terraform code
+      uses: actions/checkout@v2
+      with:
+        repository: andycockers/hcloud-actions-runner
+
+    - id: runner
+      name: Start runner
+      uses: andycockers/hcloud-actions-runner/start@0.0.7
+      with:
+        hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
+        type: type=github-hcloud-runner
+        server_type: cx11
+        location: fsn1
+        network_id: "823122"
+        github-token: ${{ secrets.GH_PAT }}
     outputs:
       instance-id: ${{ steps.runner.outputs.instance-id }}
 
