@@ -16,7 +16,7 @@ jobs:
 
     - id: runner
       name: Start runner
-      uses: andycockers/hcloud-actions-runner/start@v0.0.22
+      uses: andycockers/hcloud-actions-runner/start@v0.0.23
       with:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         type: "type=github_hcloud_runner"
