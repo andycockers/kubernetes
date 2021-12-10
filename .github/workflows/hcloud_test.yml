@@ -11,6 +11,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: andycockers/hcloud-actions-runner
+        path: hcloud-actions-runner
 
     - id: runner
       name: Start runner
