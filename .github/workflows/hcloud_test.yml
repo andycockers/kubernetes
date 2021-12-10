@@ -16,7 +16,7 @@ jobs:
 
     - id: runner
       name: Start runner
-      uses: andycockers/hcloud-actions-runner/start@v0.0.17
+      uses: andycockers/hcloud-actions-runner/start@v0.0.16
       with:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         type: "type=github_hcloud_runner"
@@ -24,7 +24,6 @@ jobs:
         location: fsn1
         network_id: "823122"
         github-token: ${{ secrets.GH_PAT }}
-        ssh-keys: "andy@DESKTOP-CC1QGR9"
     outputs:
       instance-id: ${{ steps.runner.outputs.instance-id }}
 
