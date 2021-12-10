@@ -24,8 +24,8 @@ jobs:
         location: fsn1
         network_id: "823122"
         github-token: ${{ secrets.GH_PAT }}
-    outputs:
-      instance-id: ${{ steps.start-runner.outputs.instance-id }}
+      outputs:
+        instance-id: ${{ steps.start-runner.outputs.instance-id }}
 
   main:
    needs: start-runner
