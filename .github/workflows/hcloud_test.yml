@@ -19,7 +19,7 @@ jobs:
       uses: andycockers/hcloud-actions-runner/start@v0.0.12
       with:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
-        type: "type=github-hcloud-runner"
+        type: "type=github_hcloud_runner"
         server_type: cx11
         location: fsn1
         network_id: "823122"
