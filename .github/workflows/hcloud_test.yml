@@ -11,6 +11,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: andycockers/hcloud-actions-runner
+        token: ${{ secrets.GH_PAT }}
         path: hcloud-actions-runner
 
     - id: runner
