@@ -50,3 +50,4 @@ jobs:
         instance-id: ${{ needs.start-runner.outputs.instance-id }}
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         type: "type=github_hcloud_runner"
+        network_id: "823122"
