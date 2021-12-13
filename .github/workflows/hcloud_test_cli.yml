@@ -11,7 +11,7 @@ jobs:
     steps:
     - id: runner
       name: Start runner
-      uses: andycockers/hcloud-actions-runner/start-cli@v0.0.47
+      uses: andycockers/hcloud-actions-runner/start-cli@v0.0.48
       with:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         image-id: "55418267"
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Stop runner
-      uses: andycockers/hcloud-actions-runner/stop-cli@v0.0.47
+      uses: andycockers/hcloud-actions-runner/stop-cli@v0.0.48
       with:
         instance-id: ${{ needs.start-runner.outputs.instance-id }}
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
