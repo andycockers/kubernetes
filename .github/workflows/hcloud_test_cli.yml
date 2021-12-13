@@ -16,7 +16,7 @@ jobs:
         hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
         image-id: "55418267"
         server_type: cx11
-        location: fsn1
+        location: fsn1-dc14
         network_id: "823122"
         github-token: ${{ secrets.GH_PAT }}
 
