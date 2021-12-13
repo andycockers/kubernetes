@@ -1,4 +1,4 @@
-name: hcloud test
+name: hcloud test cli
 
 on:
   
