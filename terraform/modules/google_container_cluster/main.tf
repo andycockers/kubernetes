@@ -9,6 +9,7 @@ resource "google_container_cluster" "primary" {
   # node pool and immediately delete it.
   remove_default_node_pool = true
   initial_node_count       = 1
+  
   addons_config {
     horizontal_pod_autoscaling {
       disabled = false
@@ -39,6 +40,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
     machine_type = var.machine_type
     disk_size_gb = var.disk_size_gb
     disk_type    = var.disk_type
+    service_account = "andyc-963@jenkins-test-project-284609.iam.gserviceaccount.com"
     
   }
 }
